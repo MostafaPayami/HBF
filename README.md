@@ -7,9 +7,9 @@ The Python and MATLAB codes have been used for the experiments and results prese
 The Python codes are TensorFlow/Keras models for AE-HBFnet.
 
 The following software and libraries are required:
-1) TensorFlow: Version 2.19.0 or later
-2) Python: Version 3.8.0 or later
-3) MATLAB: Version R2023b or later
+1) MATLAB: Version R2023b or later
+2) TensorFlow: Version 2.19.0 or later
+3) Keras: Version 3.8.0 or later
 
 ***************************************************************************************************
 
