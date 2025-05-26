@@ -4,7 +4,7 @@ The MATLAB and Python codes have been used for the experiments and results prese
 
 [1] M. Payami, and S. D. Blostein, “Hybrid Beamforming for mmWave Massive MIMO Systems Based on Analytical Phase Optimization and Self-Supervised Learning”, submitted to IEEE Transactions on Signal Processing, 2025.
 
-The MATLAB codes are used for IFPAD method and the Python codes are TensorFlow/Keras models for AE-HBFnet scheme.
+The MATLAB codes implement the IFPAD method, and the Python codes are TensorFlow/Keras models for AE-HBFnet scheme.
 
 The following software and libraries are required:
 1) MATLAB: Version R2023b or later
