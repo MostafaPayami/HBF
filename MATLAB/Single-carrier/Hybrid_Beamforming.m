@@ -100,7 +100,7 @@ end
 CPU_time_MO = toc;
 fprintf('   "CPU time for the MO-AltMin method is %f ms." \n', CPU_time_MO / Nsamples * 1000);
 
-%% Plot 
+%% Performance Evaluation  
 
 figure
 grid on
