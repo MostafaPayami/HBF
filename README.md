@@ -1,5 +1,4 @@
-# HBF
-Hybrid Beamforming Methods for mmWave MIMO Systems
+# Hybrid Beamforming Methods for mmWave MIMO Systems 
 The MATLAB and Python codes have been used for the experiments and results presented in the following paper [1]. 
 
 [1] M. Payami, and S. D. Blostein, “Hybrid Beamforming for mmWave Massive MIMO Systems Based on Analytical Phase Optimization and Self-Supervised Learning”, submitted to IEEE Transactions on Signal Processing, 2025.
