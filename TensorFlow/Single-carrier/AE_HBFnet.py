@@ -11,7 +11,7 @@ Nt  = 256    # Number of transmit antennas
 Nr  = 64     # Number of receive antennas
 Ns  = 6      # Number of data streams
 NRF = 8      # Number of RF chains
-NL  = 8      # Number of Learned SNQ-NDJ layers
+NL  = 8      # Number of Learned IFPAD layers
 Nf  = 16     # Number of feature maps
 
 ### Load Data ###
@@ -132,9 +132,9 @@ def learning_rate_schedule(epoch):
         return 1e-5
 LR_scheduler = tf.keras.callbacks.LearningRateScheduler(learning_rate_schedule)
 
-### Layer Design of Learned SNQ-NDJ ###
+### The Design of Learned IFPAD Subnetwork ###
 
-def Learned_SNQ_NDJ_Layer(T, Phi, Rho, Fopt):
+def Learned_IFPAD_Layer(T, Phi, Rho, Fopt):
     Psi = tf.keras.layers.Lambda(lambda x: Z_arg(x[0], x[1], x[2], x[3]), output_shape=(Nt, NRF))([T, Phi, Rho, Fopt])
     dT  = tf.keras.layers.Subtract()([Psi, T])
     sT  = tf.keras.ops.sin(dT)
@@ -207,9 +207,9 @@ T    = tf.keras.layers.Lambda(lambda x: Angle(x), output_shape=(Nt, NRF))(FopB)
 FRF  = tf.keras.layers.Lambda(lambda x: Phase2Analog(x), output_shape=(Nt, NRF, 2))(T)
 FRF  = tf.keras.layers.Rescaling(scale=tf.math.sqrt(1.0/Nt), offset=0.0)(FRF)
 
-# Decoder (Learned SNQ-NDJ)
+# Decoder (Learned IFPAD)
 for i in range(NL):
-    T, Phi, Rho = Learned_SNQ_NDJ_Layer(T, Phi, Rho, Fopt)
+    T, Phi, Rho = Learned_IFPAD_Layer(T, Phi, Rho, Fopt)
 
 # Final FRF and FBB
 Fphi = tf.keras.layers.Lambda(lambda x: Phase2Analog(x), output_shape=(NRF, Ns, 2))(Phi)
