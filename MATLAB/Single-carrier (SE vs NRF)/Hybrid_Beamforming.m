@@ -42,7 +42,7 @@ for n = 1:Nsamples
                                        Fopt(:, :, n) * Fopt(:, :, n)' * H(:, :, n)' * Wopt(:, :, n))));  
     end
 end
-CPU_time_IFPAD = toc;     % For accurate CPU time rem out the 'Spectral Efficiency' calculation step.
+CPU_time_IFPAD = toc;     % For accurate CPU time comment out the Spectral Efficiency calculation step.
 fprintf('   "CPU time for the IFPAD method is %f ms." \n', CPU_time_IFPAD / Nsamples / length(NRF) * 1000);
 
 %% OMP Hybrid Beamforming Method
