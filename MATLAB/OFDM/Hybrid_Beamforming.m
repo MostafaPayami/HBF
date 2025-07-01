@@ -15,7 +15,7 @@ NRF = 7;       % Number of RF chains
 
 SNRdB = -30:5:10;          % Signal-to-noise ratio (dB)
 SNR   = 10.^(SNRdB / 10);  % Signal-to-noise ratio
-Nsamples = 200;            % Number of channel realizations
+Nsamples = 50;             % Number of channel realizations
 
 %% mmWave OFDM Channel Realizations
 
