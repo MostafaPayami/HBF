@@ -22,7 +22,7 @@ Nsamples = 20;             % Number of channel realizations
 tic
 [Fopt, Wopt, H, At, Ar] = Channel_Generation(Nt, Nr, K, Ns, Nsamples); 
 CPU_time_Channel = toc;
-fprintf('   "%d OFDM channel realizations were generated." \n', Nsamples);
+fprintf('   "%d OFDM channel realizations were generated in %.4f seconds." \n', Nsamples, CPU_time_Channel);
 
 %% Multicarrier IFPAD Hybrid Beamforming Method
 
@@ -46,7 +46,7 @@ for n = 1:Nsamples
     end
 end
 CPU_time_IFPAD = toc;     % For accurate CPU time comment out the Spectral Efficiency calculation step.
-fprintf('   "CPU time for the IFPAD method is %f ms." \n', CPU_time_IFPAD / Nsamples * 1000);
+fprintf('   "CPU time for the IFPAD method is %.4f ms." \n', CPU_time_IFPAD / Nsamples * 1000);
 
 %% Multicarrier OMP Hybrid Beamforming Method
 
@@ -67,7 +67,7 @@ for n = 1:Nsamples
     end
 end
 CPU_time_OMP = toc;
-fprintf('   "CPU time for the OMP method is %f ms." \n', CPU_time_OMP / Nsamples * 1000);
+fprintf('   "CPU time for the OMP method is %.4f ms." \n', CPU_time_OMP / Nsamples * 1000);
 
 %% Multicarrier AO-ICD Hybrid Beamforming Method
 
@@ -86,7 +86,7 @@ for n = 1:Nsamples
     end
 end
 CPU_time_AO = toc;
-fprintf('   "CPU time for the AO-ICD method is %f ms." \n', CPU_time_AO / Nsamples / length(SNR) * 1000);
+fprintf('   "CPU time for the AO-ICD method is %.4f ms." \n', CPU_time_AO / Nsamples / length(SNR) * 1000);
 
 %% Multicarrier MO-AltMin Hybrid Beamforming Method
 
@@ -107,7 +107,7 @@ for n = 1:Nsamples
     end
 end
 CPU_time_MO = toc;
-fprintf('   "CPU time for the MO-AltMin method is %f ms." \n', CPU_time_MO / Nsamples * 1000);
+fprintf('   "CPU time for the MO-AltMin method is %.4f ms." \n', CPU_time_MO / Nsamples * 1000);
 
 %% Performance Evaluation 
 
