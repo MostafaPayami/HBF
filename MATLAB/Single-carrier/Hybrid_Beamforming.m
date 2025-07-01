@@ -14,7 +14,7 @@ NRF = 8;       % Number of RF chains
 
 SNRdB = -30:5:5;           % Signal-to-noise ratio (dB)
 SNR   = 10.^(SNRdB / 10);  % Signal-to-noise ratio
-Nsamples = 1000;           % Number of channel realizations
+Nsamples = 100;            % Number of channel realizations
 
 %% mmWave Channel Realizations
 
