@@ -21,7 +21,7 @@ Nsamples = 100;            % Number of channel realizations
 tic
 [Fopt, Wopt, H, At, Ar] = Channel_Generation(Nt, Nr, Ns, Nsamples); 
 CPU_time_Channel = toc;
-fprintf('   "%d channel realizations were generated." \n', Nsamples);
+fprintf('   "%d random channel realizations were generated in %.4f seconds." \n', Nsamples, CPU_time_Channel);
 
 %% IFPAD Hybrid Beamforming Method
 
@@ -43,7 +43,7 @@ for n = 1:Nsamples
     end
 end
 CPU_time_IFPAD = toc;     % For accurate CPU time comment out the Spectral Efficiency calculation step.
-fprintf('   "CPU time for the IFPAD method is %f ms." \n', CPU_time_IFPAD / Nsamples * 1000);
+fprintf('   "CPU time for the IFPAD method is %.4f ms." \n', CPU_time_IFPAD / Nsamples * 1000);
 
 %% OMP Hybrid Beamforming Method
 
@@ -62,7 +62,7 @@ for n = 1:Nsamples
     end
 end
 CPU_time_OMP = toc;
-fprintf('   "CPU time for the OMP method is %f ms." \n', CPU_time_OMP / Nsamples * 1000);
+fprintf('   "CPU time for the OMP method is %.4f ms." \n', CPU_time_OMP / Nsamples * 1000);
 
 %% AO-ICD Hybrid Beamforming Method
 
@@ -79,7 +79,7 @@ for n = 1:Nsamples
     end
 end
 CPU_time_AO = toc;
-fprintf('   "CPU time for the AO-ICD method is %f ms." \n', CPU_time_AO / Nsamples / length(SNR) * 1000);
+fprintf('   "CPU time for the AO-ICD method is %.4f ms." \n', CPU_time_AO / Nsamples / length(SNR) * 1000);
 
 %% MO-AltMin Hybrid Beamforming Method
 
@@ -98,7 +98,7 @@ for n = 1:Nsamples
     end
 end
 CPU_time_MO = toc;
-fprintf('   "CPU time for the MO-AltMin method is %f ms." \n', CPU_time_MO / Nsamples * 1000);
+fprintf('   "CPU time for the MO-AltMin method is %.4f ms." \n', CPU_time_MO / Nsamples * 1000);
 
 %% Performance Evaluation  
 
