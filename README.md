@@ -20,6 +20,6 @@ Hybrid analog and digital beamforming is a key technique that can address the hi
 
 Acknowledgements:
 
-This project includes (modified) implementations of the MO-AltMin and OMP algorithms. If you use any of these two methods in your research or projects, please consider citing paper [2] whose authors have written the original MO-AltMin and OMP Matlab codes.
+This project includes (modified) Matlab implementations of the MO-AltMin and OMP algorithms. If you use any of these two methods in your research or projects, please consider citing paper [2] whose authors have written the original MO-AltMin and OMP codes.
 
-[2] X. Yu, J. -C. Shen, J. Zhang and K. B. Letaief, "Alternating Minimization Algorithms for Hybrid Precoding in Millimeter Wave MIMO Systems," IEEE J. Selec. Topics Signal Proces., vol. 10, no. 3, pp. 485-500, Apr. 2016. 
+[2] X. Yu, J. -C. Shen, J. Zhang and K. B. Letaief, "Alternating Minimization Algorithms for Hybrid Precoding in Millimeter Wave MIMO Systems," IEEE J. Selec. Topic. Signal Process., vol. 10, no. 3, pp. 485-500, Apr. 2016. 
