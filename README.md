@@ -18,7 +18,7 @@ Hybrid analog and digital beamforming is a key technique that can address the hi
 
 ***************************************************************************************************
 
-Acknowledgements
+Acknowledgements:
 
 This project includes (modified) implementations of the MO-AltMin and OMP algorithms. If you use any of these two methods in your research or projects, please consider citing paper [2] whose authors have written the original MO-AltMin and OMP Matlab codes.
 
